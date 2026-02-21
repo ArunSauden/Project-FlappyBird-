@@ -12,6 +12,8 @@ class Pipe:
         self.rect_down.y=self.rect_up.y-self.pipe_distance-self.rect_up.height
         self.rect_down.x=600
         self.move_speed=move_speed
+    #For the Pipe position
+
     
     def drawPipe(self,win):
         win.blit(self.img_up,self.rect_up)

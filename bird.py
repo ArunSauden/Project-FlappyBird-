@@ -8,6 +8,7 @@ class Bird(pg.sprite.Sprite):
         self.image_index=0
         self.image=self.img_list[self.image_index]
         self.rect=self.image.get_rect(center=(100,100))
+        #For Bird flap speed
         self.y_velocity=0
         self.gravity=10
         self.flap_speed=250
@@ -26,7 +27,7 @@ class Bird(pg.sprite.Sprite):
             elif self.rect.y>0 and self.flap_speed==0:
                 self.flap_speed=250
 
-    
+    #Gravity
     def applyGravity(self,dt):
         self.y_velocity+=self.gravity*dt
         self.rect.y+=self.y_velocity
